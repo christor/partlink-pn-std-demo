@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>PN Standardizer Demo</title>
+        <title>Part Number Standardizer Demo</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="js/libs/jquery/jquery.js" type="text/javascript"></script>
@@ -21,10 +21,29 @@ and open the template in the editor.
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     </head>
     <body>
+        <center><h2>Standardize Part Number</h2></center>
+        <br>
+        <h3>Simple UI to demonstrate a use of XSB's Partnumber Standardizer web api</h3>
+        <br>
+        <br>
+        <p>Suppliers do not provide item identifying information, such as manufacturer names and part numbers, in a consistent way.  
+           This lack of standardization between vendors and data sources makes it difficult to find identical parts across the supply 
+           chain, assess pricing, regulatory conformance, and other important procurement related activities.  XSB's 
+           partnumber-standardizer web api standardizes part numbers so identical parts can be found.
+        </P>    
+        <br>        
+        <p>The part number standardizer web api standardizes part numbers removing dashes and normalizing to upper case.<br>
+           If this api is called with a part number and a manufacturer name, then prefixes can also be 
+        </p>
+        <br>
+           Further documentation can be found <a href="https://partlink.xsb.com/display/DC14/Part+Number+Standardizer+API">here</a>.
+        <br>
+        <br>
+        <br>
         <form class="form-inline" role="form" onsubmit="return false;">
             <div class="form-group">
             <label class="sr-only" for="cn" >Enter part number to standardize</label>
-            <input class="form-control" type="text" name="cn" value="" id="cn"/>
+            <input class="form-control" type="text" name="cn" value="" id="cn" placeholder="Enter part number"/>
             <button class="btn btn-default" type="submit" name="stdBut" id="btn" onclick="standardize();">Standardize</button>
             </div>
         </form>
